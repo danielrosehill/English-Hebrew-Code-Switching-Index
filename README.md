@@ -213,6 +213,7 @@ flowchart LR
 | --- | --- |
 | [Index](https://github.com/danielrosehill/Index) | Master index of all public repositories |
 | [Subindices](https://github.com/danielrosehill/Subindices) | Index of indexes. This one is listed there |
+| [Hugging-Face-Releases-Index](https://github.com/danielrosehill/Hugging-Face-Releases-Index) | All Hugging Face releases by theme. This index is its code-switching theme in depth |
 | [Israeli-AI](https://github.com/danielrosehill/Israeli-AI) | The wider Israeli AI ecosystem. This index is its code-switching branch |
 | [Hebrew-Language-Projects-Index](https://github.com/danielrosehill/Hebrew-Language-Projects-Index) | All Hebrew-language projects: TTS, fonts, calendar, translation |
 | [Speech-Tech-Index](https://github.com/danielrosehill/Speech-Tech-Index) | All speech and ASR work, of which this is the Hebrew code-switching slice |
