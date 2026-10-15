@@ -30,6 +30,7 @@ The work indexed here fixes that from two directions:
 
 - [Start here](#start-here)
 - [ASR models](#asr-models)
+- [Benchmark](#benchmark)
 - [Speech datasets](#speech-datasets)
 - [Text corpus and classifier](#text-corpus-and-classifier)
 - [Spaces and browsers](#spaces-and-browsers)
@@ -47,6 +48,7 @@ The work indexed here fixes that from two directions:
 | --- | --- |
 | Hear the problem and the fix side by side | [Whisper-Hebrish Space](https://huggingface.co/spaces/danielrosehill/Whisper-Hebrish) |
 | Train an ASR model on code-switched speech | [English-Hebrew-Codeswitching-Sentences](https://huggingface.co/datasets/danielrosehill/English-Hebrew-Codeswitching-Sentences) |
+| Compare ASR models on code-switching | [Code-switching ASR leaderboard](https://huggingface.co/spaces/danielrosehill/English-Hebrew-Codeswitching-ASR-Leaderboard) |
 | Find Hebrew words in English text | [hebrew-latin-token-classifier](https://huggingface.co/danielrosehill/hebrew-latin-token-classifier) |
 | See where the current fine-tune stands | [Parakeet code-switching fine-tune tracker](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune) |
 
@@ -66,6 +68,32 @@ Whisper Large V3 Turbo fine-tuned on English sentences containing Hebrew words, 
 A fine-tune of [`nvidia/parakeet-tdt-0.6b-v2`](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v2) for on-device Android dictation. Parakeet v2's tokenizer has no Hebrew characters, so the model learns one romanized spelling for each Hebrew word. **Status 2026-10-15: collecting data. No model has been trained yet.** The tracker repo below records progress and will link the model once it is released.
 
 [![Tracker](https://img.shields.io/badge/GitHub-Tracker-blue?logo=github)](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune)
+
+---
+
+## Benchmark
+
+### English-Hebrew-Codeswitching-ASR-Benchmark
+
+A replicable benchmark for ASR on English speech that contains Hebrew words, released 2026-10-15. The frozen v1 test set is 145 clips from the Read-Aloud-Voice-Sentences test split, tagged by subset. The headline `clean` subset is 84 clips (11.8 min, 172 Hebrew term occurrences) that overlap no published training set; 33 clips that overlap Whisper-Hebrish's training data are excluded from it. The headline metric is **Hebrew term recall**: the share of Hebrew terms written in their canonical romanized spelling, matched as whole words. The GitHub repo holds the runner and scorer (`ehcs-bench`), a Modal GPU runner and the results JSONs.
+
+v1 results on `clean`:
+
+| Model | Hebrew term recall |
+| --- | --- |
+| Parakeet code-switching fine-tune v2 | **65.7%** (WER 4.2%) |
+| Parakeet code-switching fine-tune v1 | 62.2% |
+| Whisper-Hebrish (see caveat) | 54.1% |
+| Whisper Large V3 | 45.9% |
+| Whisper Large V3 Turbo | 40.1% |
+| Parakeet TDT 0.6B v2 (stock) | 32.6% |
+| Parakeet TDT 0.6B v3 (stock) | 31.4% |
+
+> *Contamination caveat:* 33 test-set clips overlap Whisper-Hebrish's training data: 26 are the identical recordings it trained on and 7 are new recordings of sentences it trained on. They are excluded from `clean`, the headline subset. Method: [`docs/about.md`](https://github.com/danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark/blob/main/docs/about.md) in the benchmark repo.
+
+[![Hugging Face](https://img.shields.io/badge/HuggingFace-Dataset-yellow?logo=huggingface)](https://huggingface.co/datasets/danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark)
+[![Leaderboard](https://img.shields.io/badge/HuggingFace-Leaderboard-yellow?logo=huggingface)](https://huggingface.co/spaces/danielrosehill/English-Hebrew-Codeswitching-ASR-Leaderboard)
+[![GitHub](https://img.shields.io/badge/GitHub-Runner%20%2B%20scorer-blue?logo=github)](https://github.com/danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark)
 
 ---
 
@@ -117,6 +145,7 @@ An XLM-RoBERTa-base token classifier that finds Hebrew words in English text. On
 | --- | --- |
 | [Whisper-Hebrish](https://huggingface.co/spaces/danielrosehill/Whisper-Hebrish) | Record or upload audio and compare Whisper-Hebrish with stock Whisper Large V3 Turbo side by side |
 | [English-Hebrew Code-Switching Browser](https://huggingface.co/spaces/danielrosehill/English-Hebrew-Codeswitching-Browser) | Browse and listen to the code-switching recordings by Hebrew term. Reads straight from the Hub, so new recordings appear as soon as they are pushed |
+| [Code-Switching ASR Leaderboard](https://huggingface.co/spaces/danielrosehill/English-Hebrew-Codeswitching-ASR-Leaderboard) | The benchmark leaderboard: Hebrew term recall and WER for each model on the frozen test set |
 | [Hebrew-in-Latin Span Review](https://huggingface.co/spaces/danielrosehill/hebrew-latin-span-review) | The manual annotation-review UI for the token-classifier corpus |
 
 ---
@@ -130,6 +159,14 @@ Builds the text corpus and the classifier: generation, blind cross-family annota
 ![Stars](https://img.shields.io/github/stars/danielrosehill/Hebrew-Latin-Token-Classifier?style=flat) ![Last commit](https://img.shields.io/github/last-commit/danielrosehill/Hebrew-Latin-Token-Classifier?style=flat)
 
 [danielrosehill/Hebrew-Latin-Token-Classifier](https://github.com/danielrosehill/Hebrew-Latin-Token-Classifier)
+
+### English-Hebrew-Codeswitching-ASR-Benchmark
+
+The benchmark's runner and scorer (`ehcs-bench`), a Modal GPU runner, and the per-model results as JSON.
+
+![Stars](https://img.shields.io/github/stars/danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark?style=flat) ![Last commit](https://img.shields.io/github/last-commit/danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark?style=flat)
+
+[danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark](https://github.com/danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark)
 
 ### Hebrew-Small-Models-Planning
 
@@ -200,6 +237,7 @@ flowchart LR
     EHMS -- "audio imported as ehms_*" --> RAVS["Read-Aloud-Voice-Sentences<br/>(full, growing)"]
     RAVS -- "code_switch subset" --> EHCS["English-Hebrew-Codeswitching-Sentences"]
     EHCS --> PK["Parakeet v2 fine-tune<br/>(in progress)"]
+    RAVS -- "test split, frozen v1" --> BM["ASR benchmark<br/>(dataset + leaderboard)"]
     EHMS -- "text re-annotated" --> HLCS["hebrew-latin-code-switching<br/>(text, BIO spans)"]
     HLCS --> TC["hebrew-latin-token-classifier"]
     TC -. "TTS side" .-> TTS["Hebrew pronunciation in<br/>English TTS (planned)"]
