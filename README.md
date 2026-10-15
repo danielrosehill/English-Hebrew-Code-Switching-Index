@@ -238,7 +238,7 @@ flowchart LR
     EHMS["English-Hebrew-Mixed-Sentences<br/>516 clips · 2025-11"] --> WH["Whisper-Hebrish<br/>(model + Space)"]
     EHMS -- "audio imported as ehms_*" --> RAVS["Read-Aloud-Voice-Sentences<br/>(full, growing)"]
     RAVS -- "code_switch subset" --> EHCS["English-Hebrew-Codeswitching-Sentences"]
-    EHCS --> PK["Parakeet v2 fine-tune<br/>(in progress)"]
+    EHCS --> PK["Parakeet v2 fine-tune<br/>(v2 released)"]
     RAVS -- "test split, frozen v1" --> BM["ASR benchmark<br/>(dataset + leaderboard)"]
     EHMS -- "text re-annotated" --> HLCS["hebrew-latin-code-switching<br/>(text, BIO spans)"]
     HLCS --> TC["hebrew-latin-token-classifier"]
