@@ -63,9 +63,11 @@ Whisper Large V3 Turbo fine-tuned on English sentences containing Hebrew words, 
 [![Hugging Face](https://img.shields.io/badge/HuggingFace-Model-yellow?logo=huggingface)](https://huggingface.co/danielrosehill/Whisper-Hebrish)
 [![Demo](https://img.shields.io/badge/HuggingFace-Space-yellow?logo=huggingface)](https://huggingface.co/spaces/danielrosehill/Whisper-Hebrish)
 
-### Parakeet code-switching fine-tune (in progress)
+### Parakeet code-switching fine-tune
 
-A fine-tune of [`nvidia/parakeet-tdt-0.6b-v2`](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v2) for on-device Android dictation. Parakeet v2's tokenizer has no Hebrew characters, so the model learns one romanized spelling for each Hebrew word. **Status 2026-10-15: collecting data. No model has been trained yet.** The tracker repo below records progress and will link the model once it is released.
+A fine-tune of [`nvidia/parakeet-tdt-0.6b-v2`](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v2) for on-device Android dictation. Parakeet v2's tokenizer has no Hebrew characters, so the model learns one romanized spelling for each Hebrew word. **Status 2026-10-15: v2 released** (`.nemo` plus GGUF Q8_0 and Q4_K_M for on-device use). It leads the [benchmark](#benchmark) at 65.7% Hebrew term recall, against 32.6% for stock Parakeet v2. The tracker repo below records progress.
+
+[![Hugging Face](https://img.shields.io/badge/HuggingFace-Model-yellow?logo=huggingface)](https://huggingface.co/danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching)
 
 [![Tracker](https://img.shields.io/badge/GitHub-Tracker-blue?logo=github)](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune)
 
