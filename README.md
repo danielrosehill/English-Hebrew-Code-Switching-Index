@@ -35,6 +35,7 @@ The work indexed here fixes that from two directions:
 - [Text corpus and classifier](#text-corpus-and-classifier)
 - [Spaces and browsers](#spaces-and-browsers)
 - [Companion repositories](#companion-repositories)
+- [Articles](#articles)
 - [Adjacent: evaluations and personal fine-tunes](#adjacent-evaluations-and-personal-fine-tunes)
 - [Hugging Face collections](#hugging-face-collections)
 - [How the pieces connect](#how-the-pieces-connect)
@@ -66,6 +67,8 @@ Whisper Large V3 Turbo fine-tuned on English sentences containing Hebrew words, 
 ### Parakeet code-switching fine-tune
 
 A fine-tune of [`nvidia/parakeet-tdt-0.6b-v2`](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v2) for on-device Android dictation. Parakeet v2's tokenizer has no Hebrew characters, so the model learns one romanized spelling for each Hebrew word. **Status 2026-10-15: v2 released** (`.nemo` plus GGUF Q8_0 and Q4_K_M for on-device use). It leads the [benchmark](#benchmark) at 65.7% Hebrew term recall, against 32.6% for stock Parakeet v2. The tracker repo below records progress.
+
+**Formats (2026-10-16):** [GGUF](https://huggingface.co/danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching-GGUF) (Q8_0, Q4_K_M, F16: Handy, Offline Voice Input), [ONNX](https://huggingface.co/danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching-ONNX) (onnx-asr layout, fp32 + int8: Voxtype), [sherpa-onnx int8](https://huggingface.co/danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching-sherpa-onnx-int8) (a built-in download in [Parakeet-Type-Ubuntu](https://github.com/danielrosehill/Parakeet-Type-Ubuntu) 2.1.0).
 
 [![Hugging Face](https://img.shields.io/badge/HuggingFace-Model-yellow?logo=huggingface)](https://huggingface.co/danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching)
 
@@ -209,6 +212,19 @@ Desktop GUI for recording ASR training data: it generates or accepts sentences (
 ![Stars](https://img.shields.io/github/stars/danielrosehill/ASR-Training-Data-Collector?style=flat) ![Last commit](https://img.shields.io/github/last-commit/danielrosehill/ASR-Training-Data-Collector?style=flat)
 
 [danielrosehill/ASR-Training-Data-Collector](https://github.com/danielrosehill/ASR-Training-Data-Collector)
+
+---
+
+## Articles
+
+Write-ups on [blog.danielrosehill.com](https://blog.danielrosehill.com), all published 2026-10-15.
+
+| Article | Covers |
+| --- | --- |
+| [How good is speech-to-text at Hebrew words in English? I built a benchmark to find out](https://blog.danielrosehill.com/posts/english-hebrew-code-switching-asr-benchmark/) | The [benchmark](#benchmark) and leaderboard: method, contamination handling, v1 results |
+| [Parakeet that understands Hebrew in English: a first on-device fine-tune](https://blog.danielrosehill.com/posts/parakeet-english-hebrew-code-switching-v1/) | The [Parakeet code-switching fine-tune](#parakeet-code-switching-fine-tune): GGUF weights for Android, the NeMo model, the dataset |
+| [Teaching a podcast to say makolet: a classifier for Hebrew hiding in English](https://blog.danielrosehill.com/posts/hebrew-latin-token-classifier/) | The [hebrew-latin-token-classifier](#hebrew-latin-token-classifier) and the TTS problem it solves |
+| [My Hugging Face models and datasets, by theme (October 2026)](https://blog.danielrosehill.com/posts/hugging-face-models-and-datasets-october-2026/) | *Adjacent:* snapshot of all Hugging Face releases; code-switching is one theme |
 
 ---
 
