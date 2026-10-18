@@ -35,29 +35,31 @@
       ]
     },
     {
-      "id": "danielrosehill/English-Hebrew-Codeswitching-Voice-Keyboard-Android",
+      "id": "danielrosehill/Voice-To-Hebrish",
       "platform": "github",
       "kind": "app",
       "role": "dictation",
-      "os": "android",
+      "os": [
+        "android",
+        "linux",
+        "windows"
+      ],
       "status": "proof-of-concept",
-      "version": "v0.4.0",
       "released": "2026-10-18",
-      "url": "https://github.com/danielrosehill/English-Hebrew-Codeswitching-Voice-Keyboard-Android",
-      "download": "https://github.com/danielrosehill/English-Hebrew-Codeswitching-Voice-Keyboard-Android/releases/download/v0.4.0/CodeswitchVoice-v0.4.0.apk",
-      "runs": "danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching"
-    },
-    {
-      "id": "danielrosehill/English-Hebrew-Codeswitching-Dictation-Linux",
-      "platform": "github",
-      "kind": "app",
-      "role": "dictation",
-      "os": "linux",
-      "status": "proof-of-concept",
-      "version": "v0.1.0",
-      "released": "2026-10-18",
-      "url": "https://github.com/danielrosehill/English-Hebrew-Codeswitching-Dictation-Linux",
-      "download": "https://github.com/danielrosehill/English-Hebrew-Codeswitching-Dictation-Linux/releases/download/v0.1.0/codeswitch-dictation_0.1.0-1_amd64.deb",
+      "url": "https://github.com/danielrosehill/Voice-To-Hebrish",
+      "versions": {
+        "android": "v0.6.0",
+        "desktop": "v0.2.0"
+      },
+      "downloads": {
+        "android": "https://github.com/danielrosehill/Voice-To-Hebrish/releases/download/android-v0.6.0/VoiceToHebrish-v0.6.0.apk",
+        "linux": "https://github.com/danielrosehill/Voice-To-Hebrish/releases/download/desktop-v0.2.0/voice-to-hebrish_0.2.0-1_amd64.deb",
+        "windows": "https://github.com/danielrosehill/Voice-To-Hebrish/releases/download/desktop-v0.2.0/VoiceToHebrish-v0.2.0-windows-x64.zip"
+      },
+      "formerly": [
+        "danielrosehill/English-Hebrew-Codeswitching-Voice-Keyboard-Android",
+        "danielrosehill/English-Hebrew-Codeswitching-Dictation-Linux"
+      ],
       "runs": "danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching"
     },
     {

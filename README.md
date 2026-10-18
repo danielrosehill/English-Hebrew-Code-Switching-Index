@@ -52,7 +52,7 @@ The work indexed here fixes that from two directions:
 | Train an ASR model on code-switched speech | [English-Hebrew-Codeswitching-Sentences](https://huggingface.co/datasets/danielrosehill/English-Hebrew-Codeswitching-Sentences) |
 | Compare ASR models on code-switching | [Code-switching ASR leaderboard](https://huggingface.co/spaces/danielrosehill/English-Hebrew-Codeswitching-ASR-Leaderboard) |
 | Find Hebrew words in English text | [hebrew-latin-token-classifier](https://huggingface.co/danielrosehill/hebrew-latin-token-classifier) |
-| Dictate with the fine-tune on Android or Ubuntu | [Codeswitch Voice APK](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Voice-Keyboard-Android/releases/download/v0.4.0/CodeswitchVoice-v0.4.0.apk) · [Codeswitch Dictation .deb](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Dictation-Linux/releases/download/v0.1.0/codeswitch-dictation_0.1.0-1_amd64.deb) |
+| Dictate with the fine-tune on Android, Ubuntu or Windows | [Voice To Hebrish APK](https://github.com/danielrosehill/Voice-To-Hebrish/releases/download/android-v0.6.0/VoiceToHebrish-v0.6.0.apk) · [Voice To Hebrish .deb](https://github.com/danielrosehill/Voice-To-Hebrish/releases/download/desktop-v0.2.0/voice-to-hebrish_0.2.0-1_amd64.deb) · [Windows .zip](https://github.com/danielrosehill/Voice-To-Hebrish/releases/download/desktop-v0.2.0/VoiceToHebrish-v0.2.0-windows-x64.zip) |
 | See where the current fine-tune stands | [Parakeet code-switching fine-tune tracker](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune) |
 
 ---
@@ -80,21 +80,22 @@ A fine-tune of [`nvidia/parakeet-tdt-0.6b-v2`](https://huggingface.co/nvidia/par
 
 ## Apps
 
-Proof-of-concept apps that run the [Parakeet code-switching fine-tune](#parakeet-code-switching-fine-tune) on-device through sherpa-onnx. Both download the model themselves and pick up new fine-tunes from Hugging Face without an app update.
+Proof-of-concept apps, in one repo ([Voice-To-Hebrish](https://github.com/danielrosehill/Voice-To-Hebrish)), that run the [Parakeet code-switching fine-tune](#parakeet-code-switching-fine-tune) on-device through sherpa-onnx. Both download the model themselves and pick up new fine-tunes from Hugging Face without an app update.
 
-### Codeswitch Voice (Android)
+### Voice To Hebrish (Android)
 
-A voice keyboard (IME) that works as the companion voice input for HeliBoard. v0.4.0, 2026-10-18. Not yet tested on a phone.
+A voice keyboard (IME) that works as the companion voice input for HeliBoard, with a **Try it** notepad in the app for testing it without any keyboard setup. v0.6.0, 2026-10-18.
 
-[![APK](https://img.shields.io/badge/Download-APK_v0.4.0-2E7D6B?logo=android&logoColor=white)](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Voice-Keyboard-Android/releases/download/v0.4.0/CodeswitchVoice-v0.4.0.apk)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Voice-Keyboard-Android)
+[![APK](https://img.shields.io/badge/Download-APK_v0.6.0-2E7D6B?logo=android&logoColor=white)](https://github.com/danielrosehill/Voice-To-Hebrish/releases/download/android-v0.6.0/VoiceToHebrish-v0.6.0.apk)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/danielrosehill/Voice-To-Hebrish/tree/main/android)
 
-### Codeswitch Dictation (Linux)
+### Voice To Hebrish (Linux and Windows)
 
-A tray dictation app for Ubuntu. It works with any hotkey or foot pedal (tap to toggle, or hold to talk) and pastes at the cursor. It downloads the model on first run and checks for updates on a schedule. v0.1.0, 2026-10-18, a .deb for Ubuntu 26.04 amd64. It replaces Parakeet-Type-Ubuntu for this model.
+A tray dictation app for Ubuntu and Windows. Hotkey or foot-pedal dictation (tap to toggle, or hold to talk) pastes at the cursor. A Transcribe tab records long takes or opens audio files into an editable text box. It downloads the model on first run and checks for updates. v0.2.0, 2026-10-18: a .deb for Ubuntu 26.04 amd64 and a portable Windows zip (not yet tried on a real PC). It replaces Parakeet-Type-Ubuntu for this model.
 
-[![.deb](https://img.shields.io/badge/Download-.deb_v0.1.0-E95420?logo=ubuntu&logoColor=white)](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Dictation-Linux/releases/download/v0.1.0/codeswitch-dictation_0.1.0-1_amd64.deb)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Dictation-Linux)
+[![.deb](https://img.shields.io/badge/Download-.deb_v0.2.0-E95420?logo=ubuntu&logoColor=white)](https://github.com/danielrosehill/Voice-To-Hebrish/releases/download/desktop-v0.2.0/voice-to-hebrish_0.2.0-1_amd64.deb)
+[![Windows](https://img.shields.io/badge/Download-Windows_v0.2.0-0078D4?logo=windows&logoColor=white)](https://github.com/danielrosehill/Voice-To-Hebrish/releases/download/desktop-v0.2.0/VoiceToHebrish-v0.2.0-windows-x64.zip)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/danielrosehill/Voice-To-Hebrish/tree/main/desktop)
 
 ---
 
