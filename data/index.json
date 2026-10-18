@@ -1,27 +1,272 @@
 {
   "index": "English-Hebrew-Code-Switching-Index",
-  "snapshot": "2026-10-15",
+  "snapshot": "2026-10-18",
   "entries": [
-    {"id": "danielrosehill/Whisper-Hebrish", "platform": "huggingface", "kind": "model", "role": "asr", "status": "released", "url": "https://huggingface.co/danielrosehill/Whisper-Hebrish", "base_model": "openai/whisper-large-v3-turbo", "trained_on": ["danielrosehill/English-Hebrew-Mixed-Sentences"]},
-    {"id": "danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching", "platform": "huggingface", "kind": "model", "role": "asr", "status": "released", "released": "2026-10-15", "version": "v2", "url": "https://huggingface.co/danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching", "tracker": "https://github.com/danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune", "base_model": "nvidia/parakeet-tdt-0.6b-v2", "trained_on": ["danielrosehill/English-Hebrew-Codeswitching-Sentences"], "formats": ["danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching-GGUF", "danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching-ONNX", "danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching-sherpa-onnx-int8"]},
-    {"id": "danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark", "platform": "huggingface", "kind": "dataset", "role": "benchmark", "status": "released", "released": "2026-10-15", "url": "https://huggingface.co/datasets/danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark", "version": "v1", "derived_from": "danielrosehill/Read-Aloud-Voice-Sentences", "size": {"clips": 145, "clean_clips": 84, "clean_minutes": 11.8, "clean_term_occurrences": 172}, "headline_metric": "hebrew_term_recall (canonical romanized spelling, whole-word) on the clean subset", "note": "Frozen test set from the Read-Aloud-Voice-Sentences test split, tagged by subset. clean = no overlap with any published training set; 33 clips overlapping Whisper-Hebrish training data excluded", "results_v1_clean": [{"model": "Parakeet code-switching fine-tune v2", "term_recall": 0.657, "wer": 0.042}, {"model": "Parakeet code-switching fine-tune v1", "term_recall": 0.622}, {"model": "danielrosehill/Whisper-Hebrish", "term_recall": 0.541, "caveat": "training-data contamination; overlapping clips excluded from clean"}, {"model": "openai/whisper-large-v3", "term_recall": 0.459}, {"model": "openai/whisper-large-v3-turbo", "term_recall": 0.401}, {"model": "nvidia/parakeet-tdt-0.6b-v2", "term_recall": 0.326}, {"model": "nvidia/parakeet-tdt-0.6b-v3", "term_recall": 0.314}]},
-    {"id": "danielrosehill/Read-Aloud-Voice-Sentences", "platform": "huggingface", "kind": "dataset", "role": "asr-audio", "status": "growing", "url": "https://huggingface.co/datasets/danielrosehill/Read-Aloud-Voice-Sentences", "note": "Full dataset; single speaker; phone mic; term-disjoint splits"},
-    {"id": "danielrosehill/English-Hebrew-Codeswitching-Sentences", "platform": "huggingface", "kind": "dataset", "role": "asr-audio", "status": "growing", "url": "https://huggingface.co/datasets/danielrosehill/English-Hebrew-Codeswitching-Sentences", "derived_from": "danielrosehill/Read-Aloud-Voice-Sentences", "note": "code_switch subset, rows copied unchanged"},
-    {"id": "danielrosehill/English-Hebrew-Mixed-Sentences", "platform": "huggingface", "kind": "dataset", "role": "asr-audio", "status": "superseded", "url": "https://huggingface.co/datasets/danielrosehill/English-Hebrew-Mixed-Sentences", "superseded_by": ["danielrosehill/Read-Aloud-Voice-Sentences", "danielrosehill/hebrew-latin-code-switching"], "known_defect": "hebrew_word labels substring-matched; 114 of 474 wrong (verified 2026-09-22)"},
-    {"id": "danielrosehill/hebrew-latin-code-switching", "platform": "huggingface", "kind": "dataset", "role": "text-token-classification", "status": "released", "url": "https://huggingface.co/datasets/danielrosehill/hebrew-latin-code-switching", "size": {"sentences": 4737, "dictated": 458}},
-    {"id": "danielrosehill/hebrew-latin-token-classifier", "platform": "huggingface", "kind": "model", "role": "text-token-classification", "status": "released", "url": "https://huggingface.co/danielrosehill/hebrew-latin-token-classifier", "base_model": "FacebookAI/xlm-roberta-base", "metrics": {"span_f1": 0.941, "precision": 0.928, "recall": 0.953, "split": "test, term-disjoint"}},
-    {"id": "danielrosehill/Whisper-Hebrish", "platform": "huggingface", "kind": "space", "role": "demo", "status": "live", "url": "https://huggingface.co/spaces/danielrosehill/Whisper-Hebrish"},
-    {"id": "danielrosehill/English-Hebrew-Codeswitching-Browser", "platform": "huggingface", "kind": "space", "role": "browser", "status": "live", "url": "https://huggingface.co/spaces/danielrosehill/English-Hebrew-Codeswitching-Browser"},
-    {"id": "danielrosehill/English-Hebrew-Codeswitching-ASR-Leaderboard", "platform": "huggingface", "kind": "space", "role": "leaderboard", "status": "live", "url": "https://huggingface.co/spaces/danielrosehill/English-Hebrew-Codeswitching-ASR-Leaderboard", "sdk": "gradio", "dataset": "danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark"},
-    {"id": "danielrosehill/hebrew-latin-span-review", "platform": "huggingface", "kind": "space", "role": "annotation-review", "status": "live", "url": "https://huggingface.co/spaces/danielrosehill/hebrew-latin-span-review"},
-    {"id": "danielrosehill/Hebrew-Latin-Token-Classifier", "platform": "github", "kind": "repo", "role": "build", "url": "https://github.com/danielrosehill/Hebrew-Latin-Token-Classifier"},
-    {"id": "danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark", "platform": "github", "kind": "repo", "role": "benchmark", "url": "https://github.com/danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark", "note": "Runner + scorer (ehcs-bench), Modal GPU runner, results/ JSONs"},
-    {"id": "danielrosehill/Hebrew-Small-Models-Planning", "platform": "github", "kind": "repo", "role": "planning-tts", "url": "https://github.com/danielrosehill/Hebrew-Small-Models-Planning"},
-    {"id": "danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune", "platform": "github", "kind": "repo", "role": "tracker", "url": "https://github.com/danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune"},
-    {"id": "danielrosehill/Whisper-Fine-Tune-Accuracy-Eval", "platform": "github", "kind": "repo", "role": "evaluation", "url": "https://github.com/danielrosehill/Whisper-Fine-Tune-Accuracy-Eval"},
-    {"id": "danielrosehill/Modal-Whisper-Finetune-Script", "platform": "github", "kind": "repo", "role": "training-tooling", "url": "https://github.com/danielrosehill/Modal-Whisper-Finetune-Script"},
-    {"id": "danielrosehill/ASR-Training-Data-Collector", "platform": "github", "kind": "repo", "role": "data-capture", "url": "https://github.com/danielrosehill/ASR-Training-Data-Collector"},
-    {"id": "danielrosehill/Small-STT-Eval-Audio-Dataset", "platform": "huggingface", "kind": "dataset", "role": "adjacent-eval", "url": "https://huggingface.co/datasets/danielrosehill/Small-STT-Eval-Audio-Dataset"},
-    {"id": "danielrosehill/STT-Voice-Notes-Evals", "platform": "huggingface", "kind": "dataset", "role": "adjacent-eval", "url": "https://huggingface.co/datasets/danielrosehill/STT-Voice-Notes-Evals"}
+    {
+      "id": "danielrosehill/Whisper-Hebrish",
+      "platform": "huggingface",
+      "kind": "model",
+      "role": "asr",
+      "status": "released",
+      "url": "https://huggingface.co/danielrosehill/Whisper-Hebrish",
+      "base_model": "openai/whisper-large-v3-turbo",
+      "trained_on": [
+        "danielrosehill/English-Hebrew-Mixed-Sentences"
+      ]
+    },
+    {
+      "id": "danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching",
+      "platform": "huggingface",
+      "kind": "model",
+      "role": "asr",
+      "status": "released",
+      "released": "2026-10-15",
+      "version": "v2",
+      "url": "https://huggingface.co/danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching",
+      "tracker": "https://github.com/danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune",
+      "base_model": "nvidia/parakeet-tdt-0.6b-v2",
+      "trained_on": [
+        "danielrosehill/English-Hebrew-Codeswitching-Sentences"
+      ],
+      "formats": [
+        "danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching-GGUF",
+        "danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching-ONNX",
+        "danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching-sherpa-onnx-int8"
+      ]
+    },
+    {
+      "id": "danielrosehill/English-Hebrew-Codeswitching-Voice-Keyboard-Android",
+      "platform": "github",
+      "kind": "app",
+      "role": "dictation",
+      "os": "android",
+      "status": "proof-of-concept",
+      "version": "v0.4.0",
+      "released": "2026-10-18",
+      "url": "https://github.com/danielrosehill/English-Hebrew-Codeswitching-Voice-Keyboard-Android",
+      "download": "https://github.com/danielrosehill/English-Hebrew-Codeswitching-Voice-Keyboard-Android/releases/download/v0.4.0/CodeswitchVoice-v0.4.0.apk",
+      "runs": "danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching"
+    },
+    {
+      "id": "danielrosehill/English-Hebrew-Codeswitching-Dictation-Linux",
+      "platform": "github",
+      "kind": "app",
+      "role": "dictation",
+      "os": "linux",
+      "status": "proof-of-concept",
+      "version": "v0.1.0",
+      "released": "2026-10-18",
+      "url": "https://github.com/danielrosehill/English-Hebrew-Codeswitching-Dictation-Linux",
+      "download": "https://github.com/danielrosehill/English-Hebrew-Codeswitching-Dictation-Linux/releases/download/v0.1.0/codeswitch-dictation_0.1.0-1_amd64.deb",
+      "runs": "danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching"
+    },
+    {
+      "id": "danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark",
+      "platform": "huggingface",
+      "kind": "dataset",
+      "role": "benchmark",
+      "status": "released",
+      "released": "2026-10-15",
+      "url": "https://huggingface.co/datasets/danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark",
+      "version": "v1",
+      "derived_from": "danielrosehill/Read-Aloud-Voice-Sentences",
+      "size": {
+        "clips": 145,
+        "clean_clips": 84,
+        "clean_minutes": 11.8,
+        "clean_term_occurrences": 172
+      },
+      "headline_metric": "hebrew_term_recall (canonical romanized spelling, whole-word) on the clean subset",
+      "note": "Frozen test set from the Read-Aloud-Voice-Sentences test split, tagged by subset. clean = no overlap with any published training set; 33 clips overlapping Whisper-Hebrish training data excluded",
+      "results_v1_clean": [
+        {
+          "model": "Parakeet code-switching fine-tune v2",
+          "term_recall": 0.657,
+          "wer": 0.042
+        },
+        {
+          "model": "Parakeet code-switching fine-tune v1",
+          "term_recall": 0.622
+        },
+        {
+          "model": "danielrosehill/Whisper-Hebrish",
+          "term_recall": 0.541,
+          "caveat": "training-data contamination; overlapping clips excluded from clean"
+        },
+        {
+          "model": "openai/whisper-large-v3",
+          "term_recall": 0.459
+        },
+        {
+          "model": "openai/whisper-large-v3-turbo",
+          "term_recall": 0.401
+        },
+        {
+          "model": "nvidia/parakeet-tdt-0.6b-v2",
+          "term_recall": 0.326
+        },
+        {
+          "model": "nvidia/parakeet-tdt-0.6b-v3",
+          "term_recall": 0.314
+        }
+      ]
+    },
+    {
+      "id": "danielrosehill/Read-Aloud-Voice-Sentences",
+      "platform": "huggingface",
+      "kind": "dataset",
+      "role": "asr-audio",
+      "status": "growing",
+      "url": "https://huggingface.co/datasets/danielrosehill/Read-Aloud-Voice-Sentences",
+      "note": "Full dataset; single speaker; phone mic; term-disjoint splits"
+    },
+    {
+      "id": "danielrosehill/English-Hebrew-Codeswitching-Sentences",
+      "platform": "huggingface",
+      "kind": "dataset",
+      "role": "asr-audio",
+      "status": "growing",
+      "url": "https://huggingface.co/datasets/danielrosehill/English-Hebrew-Codeswitching-Sentences",
+      "derived_from": "danielrosehill/Read-Aloud-Voice-Sentences",
+      "note": "code_switch subset, rows copied unchanged"
+    },
+    {
+      "id": "danielrosehill/English-Hebrew-Mixed-Sentences",
+      "platform": "huggingface",
+      "kind": "dataset",
+      "role": "asr-audio",
+      "status": "superseded",
+      "url": "https://huggingface.co/datasets/danielrosehill/English-Hebrew-Mixed-Sentences",
+      "superseded_by": [
+        "danielrosehill/Read-Aloud-Voice-Sentences",
+        "danielrosehill/hebrew-latin-code-switching"
+      ],
+      "known_defect": "hebrew_word labels substring-matched; 114 of 474 wrong (verified 2026-09-22)"
+    },
+    {
+      "id": "danielrosehill/hebrew-latin-code-switching",
+      "platform": "huggingface",
+      "kind": "dataset",
+      "role": "text-token-classification",
+      "status": "released",
+      "url": "https://huggingface.co/datasets/danielrosehill/hebrew-latin-code-switching",
+      "size": {
+        "sentences": 4737,
+        "dictated": 458
+      }
+    },
+    {
+      "id": "danielrosehill/hebrew-latin-token-classifier",
+      "platform": "huggingface",
+      "kind": "model",
+      "role": "text-token-classification",
+      "status": "released",
+      "url": "https://huggingface.co/danielrosehill/hebrew-latin-token-classifier",
+      "base_model": "FacebookAI/xlm-roberta-base",
+      "metrics": {
+        "span_f1": 0.941,
+        "precision": 0.928,
+        "recall": 0.953,
+        "split": "test, term-disjoint"
+      }
+    },
+    {
+      "id": "danielrosehill/Whisper-Hebrish",
+      "platform": "huggingface",
+      "kind": "space",
+      "role": "demo",
+      "status": "live",
+      "url": "https://huggingface.co/spaces/danielrosehill/Whisper-Hebrish"
+    },
+    {
+      "id": "danielrosehill/English-Hebrew-Codeswitching-Browser",
+      "platform": "huggingface",
+      "kind": "space",
+      "role": "browser",
+      "status": "live",
+      "url": "https://huggingface.co/spaces/danielrosehill/English-Hebrew-Codeswitching-Browser"
+    },
+    {
+      "id": "danielrosehill/English-Hebrew-Codeswitching-ASR-Leaderboard",
+      "platform": "huggingface",
+      "kind": "space",
+      "role": "leaderboard",
+      "status": "live",
+      "url": "https://huggingface.co/spaces/danielrosehill/English-Hebrew-Codeswitching-ASR-Leaderboard",
+      "sdk": "gradio",
+      "dataset": "danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark"
+    },
+    {
+      "id": "danielrosehill/hebrew-latin-span-review",
+      "platform": "huggingface",
+      "kind": "space",
+      "role": "annotation-review",
+      "status": "live",
+      "url": "https://huggingface.co/spaces/danielrosehill/hebrew-latin-span-review"
+    },
+    {
+      "id": "danielrosehill/Hebrew-Latin-Token-Classifier",
+      "platform": "github",
+      "kind": "repo",
+      "role": "build",
+      "url": "https://github.com/danielrosehill/Hebrew-Latin-Token-Classifier"
+    },
+    {
+      "id": "danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark",
+      "platform": "github",
+      "kind": "repo",
+      "role": "benchmark",
+      "url": "https://github.com/danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark",
+      "note": "Runner + scorer (ehcs-bench), Modal GPU runner, results/ JSONs"
+    },
+    {
+      "id": "danielrosehill/Hebrew-Small-Models-Planning",
+      "platform": "github",
+      "kind": "repo",
+      "role": "planning-tts",
+      "url": "https://github.com/danielrosehill/Hebrew-Small-Models-Planning"
+    },
+    {
+      "id": "danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune",
+      "platform": "github",
+      "kind": "repo",
+      "role": "tracker",
+      "url": "https://github.com/danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune"
+    },
+    {
+      "id": "danielrosehill/Whisper-Fine-Tune-Accuracy-Eval",
+      "platform": "github",
+      "kind": "repo",
+      "role": "evaluation",
+      "url": "https://github.com/danielrosehill/Whisper-Fine-Tune-Accuracy-Eval"
+    },
+    {
+      "id": "danielrosehill/Modal-Whisper-Finetune-Script",
+      "platform": "github",
+      "kind": "repo",
+      "role": "training-tooling",
+      "url": "https://github.com/danielrosehill/Modal-Whisper-Finetune-Script"
+    },
+    {
+      "id": "danielrosehill/ASR-Training-Data-Collector",
+      "platform": "github",
+      "kind": "repo",
+      "role": "data-capture",
+      "url": "https://github.com/danielrosehill/ASR-Training-Data-Collector"
+    },
+    {
+      "id": "danielrosehill/Small-STT-Eval-Audio-Dataset",
+      "platform": "huggingface",
+      "kind": "dataset",
+      "role": "adjacent-eval",
+      "url": "https://huggingface.co/datasets/danielrosehill/Small-STT-Eval-Audio-Dataset"
+    },
+    {
+      "id": "danielrosehill/STT-Voice-Notes-Evals",
+      "platform": "huggingface",
+      "kind": "dataset",
+      "role": "adjacent-eval",
+      "url": "https://huggingface.co/datasets/danielrosehill/STT-Voice-Notes-Evals"
+    }
   ]
 }

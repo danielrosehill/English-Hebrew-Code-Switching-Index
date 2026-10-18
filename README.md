@@ -5,7 +5,7 @@
 
 Models, datasets, Spaces and companion repositories for **English speech and text that contains Hebrew words** — the way English-speaking immigrants in Israel and Jews in the diaspora actually talk.
 
-**Snapshot:** 2026-10-15 · Machine-readable copy: [`data/index.json`](data/index.json)
+**Snapshot:** 2026-10-18 · Machine-readable copy: [`data/index.json`](data/index.json)
 
 ---
 
@@ -30,6 +30,7 @@ The work indexed here fixes that from two directions:
 
 - [Start here](#start-here)
 - [ASR models](#asr-models)
+- [Apps](#apps)
 - [Benchmark](#benchmark)
 - [Speech datasets](#speech-datasets)
 - [Text corpus and classifier](#text-corpus-and-classifier)
@@ -51,6 +52,7 @@ The work indexed here fixes that from two directions:
 | Train an ASR model on code-switched speech | [English-Hebrew-Codeswitching-Sentences](https://huggingface.co/datasets/danielrosehill/English-Hebrew-Codeswitching-Sentences) |
 | Compare ASR models on code-switching | [Code-switching ASR leaderboard](https://huggingface.co/spaces/danielrosehill/English-Hebrew-Codeswitching-ASR-Leaderboard) |
 | Find Hebrew words in English text | [hebrew-latin-token-classifier](https://huggingface.co/danielrosehill/hebrew-latin-token-classifier) |
+| Dictate with the fine-tune on Android or Ubuntu | [Codeswitch Voice APK](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Voice-Keyboard-Android/releases/download/v0.4.0/CodeswitchVoice-v0.4.0.apk) · [Codeswitch Dictation .deb](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Dictation-Linux/releases/download/v0.1.0/codeswitch-dictation_0.1.0-1_amd64.deb) |
 | See where the current fine-tune stands | [Parakeet code-switching fine-tune tracker](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune) |
 
 ---
@@ -73,6 +75,26 @@ A fine-tune of [`nvidia/parakeet-tdt-0.6b-v2`](https://huggingface.co/nvidia/par
 [![Hugging Face](https://img.shields.io/badge/HuggingFace-Model-yellow?logo=huggingface)](https://huggingface.co/danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching)
 
 [![Tracker](https://img.shields.io/badge/GitHub-Tracker-blue?logo=github)](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune)
+
+---
+
+## Apps
+
+Proof-of-concept apps that run the [Parakeet code-switching fine-tune](#parakeet-code-switching-fine-tune) on-device through sherpa-onnx. Both download the model themselves and pick up new fine-tunes from Hugging Face without an app update.
+
+### Codeswitch Voice (Android)
+
+A voice keyboard (IME) that works as the companion voice input for HeliBoard. v0.4.0, 2026-10-18. Not yet tested on a phone.
+
+[![APK](https://img.shields.io/badge/Download-APK_v0.4.0-2E7D6B?logo=android&logoColor=white)](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Voice-Keyboard-Android/releases/download/v0.4.0/CodeswitchVoice-v0.4.0.apk)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Voice-Keyboard-Android)
+
+### Codeswitch Dictation (Linux)
+
+A tray dictation app for Ubuntu. It works with any hotkey or foot pedal (tap to toggle, or hold to talk) and pastes at the cursor. It downloads the model on first run and checks for updates on a schedule. v0.1.0, 2026-10-18, a .deb for Ubuntu 26.04 amd64. It replaces Parakeet-Type-Ubuntu for this model.
+
+[![.deb](https://img.shields.io/badge/Download-.deb_v0.1.0-E95420?logo=ubuntu&logoColor=white)](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Dictation-Linux/releases/download/v0.1.0/codeswitch-dictation_0.1.0-1_amd64.deb)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Dictation-Linux)
 
 ---
 
