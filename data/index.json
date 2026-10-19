@@ -1,6 +1,6 @@
 {
   "index": "English-Hebrew-Code-Switching-Index",
-  "snapshot": "2026-10-18",
+  "snapshot": "2026-10-19",
   "entries": [
     {
       "id": "danielrosehill/Whisper-Hebrish",
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "id": "danielrosehill/Voice-To-Hebrish",
+      "id": "danielrosehill/Parlance-Dictation",
       "platform": "github",
       "kind": "app",
       "role": "dictation",
@@ -45,20 +45,26 @@
         "windows"
       ],
       "status": "proof-of-concept",
-      "released": "2026-10-18",
-      "url": "https://github.com/danielrosehill/Voice-To-Hebrish",
+      "released": "2026-10-19",
+      "url": "https://github.com/danielrosehill/Parlance-Dictation",
       "versions": {
-        "android": "v0.6.0",
-        "desktop": "v0.2.0"
+        "android": "v0.1.0",
+        "desktop": "v0.1.0"
       },
       "downloads": {
-        "android": "https://github.com/danielrosehill/Voice-To-Hebrish/releases/download/android-v0.6.0/VoiceToHebrish-v0.6.0.apk",
-        "linux": "https://github.com/danielrosehill/Voice-To-Hebrish/releases/download/desktop-v0.2.0/voice-to-hebrish_0.2.0-1_amd64.deb",
-        "windows": "https://github.com/danielrosehill/Voice-To-Hebrish/releases/download/desktop-v0.2.0/VoiceToHebrish-v0.2.0-windows-x64.zip"
+        "android": "https://github.com/danielrosehill/Parlance-Dictation/releases/download/android-v0.1.0/Parlance-v0.1.0.apk",
+        "linux": "https://github.com/danielrosehill/Parlance-Dictation/releases/download/desktop-v0.1.0/parlance_0.1.0-1_amd64.deb",
+        "windows": "https://github.com/danielrosehill/Parlance-Dictation/releases/download/desktop-v0.1.0/Parlance-v0.1.0-windows-x64.zip"
       },
       "formerly": [
+        "danielrosehill/Voice-To-Hebrish",
+        "danielrosehill/Parakeet-Type-Ubuntu",
         "danielrosehill/English-Hebrew-Codeswitching-Voice-Keyboard-Android",
         "danielrosehill/English-Hebrew-Codeswitching-Dictation-Linux"
+      ],
+      "models": [
+        "nvidia/parakeet-tdt-0.6b-v2",
+        "danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching"
       ],
       "runs": "danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching"
     },
