@@ -53,8 +53,8 @@ The work indexed here fixes that from two directions:
 | Train an ASR model on code-switched speech | [English-Hebrew-Codeswitching-Sentences](https://huggingface.co/datasets/danielrosehill/English-Hebrew-Codeswitching-Sentences) |
 | Compare ASR models on code-switching | [Code-switching ASR leaderboard](https://huggingface.co/spaces/danielrosehill/English-Hebrew-Codeswitching-ASR-Leaderboard) |
 | Find Hebrew words in English text | [hebrew-latin-token-classifier](https://huggingface.co/danielrosehill/hebrew-latin-token-classifier) |
-| Dictate with the fine-tune on Android, Ubuntu or Windows | [Parlance APK](https://github.com/danielrosehill/Parlance-Dictation/releases/download/android-v0.1.0/Parlance-v0.1.0.apk) · [Parlance .deb](https://github.com/danielrosehill/Parlance-Dictation/releases/download/desktop-v0.1.0/parlance_0.1.0-1_amd64.deb) · [Windows .zip](https://github.com/danielrosehill/Parlance-Dictation/releases/download/desktop-v0.1.0/Parlance-v0.1.0-windows-x64.zip) |
-| See where the current fine-tune stands | [Parakeet code-switching fine-tune tracker](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune) |
+| Dictate with the fine-tune on Android, Ubuntu or Windows | [Parlance APK](https://github.com/Hebrish-ASR/Parlance-Dictation/releases/download/android-v0.1.0/Parlance-v0.1.0.apk) · [Parlance .deb](https://github.com/Hebrish-ASR/Parlance-Dictation/releases/download/desktop-v0.1.0/parlance_0.1.0-1_amd64.deb) · [Windows .zip](https://github.com/Hebrish-ASR/Parlance-Dictation/releases/download/desktop-v0.1.0/Parlance-v0.1.0-windows-x64.zip) |
+| See where the current fine-tune stands | [Parakeet code-switching fine-tune tracker](https://github.com/Hebrish-ASR/English-Hebrew-Codeswitching-Parakeet-Finetune) |
 
 ---
 
@@ -73,11 +73,11 @@ A fine-tune of [`nvidia/parakeet-tdt-0.6b-v2`](https://huggingface.co/nvidia/par
 
 **Website: [hebrish.app](https://hebrish.app)**: get the Hebrish keyboard for Android and the desktop apps, see the results, and find every model, dataset and demo in one place.
 
-**Formats (2026-10-16):** [GGUF](https://huggingface.co/danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching-GGUF) (Q8_0, Q4_K_M, F16: Handy, Offline Voice Input), [ONNX](https://huggingface.co/danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching-ONNX) (onnx-asr layout, fp32 + int8: Voxtype), [sherpa-onnx int8](https://huggingface.co/danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching-sherpa-onnx-int8) (the format [Parlance](https://github.com/danielrosehill/Parlance-Dictation) downloads).
+**Formats (2026-10-16):** [GGUF](https://huggingface.co/Hebrish/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching-GGUF) (Q8_0, Q4_K_M, F16: Handy, Offline Voice Input), [ONNX](https://huggingface.co/Hebrish/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching-ONNX) (onnx-asr layout, fp32 + int8: Voxtype), [sherpa-onnx int8](https://huggingface.co/Hebrish/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching-sherpa-onnx-int8) (the format [Parlance](https://github.com/Hebrish-ASR/Parlance-Dictation) downloads).
 
 [![Hugging Face](https://img.shields.io/badge/HuggingFace-Model-yellow?logo=huggingface)](https://huggingface.co/danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching)
 
-[![Tracker](https://img.shields.io/badge/GitHub-Tracker-blue?logo=github)](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune)
+[![Tracker](https://img.shields.io/badge/GitHub-Tracker-blue?logo=github)](https://github.com/Hebrish-ASR/English-Hebrew-Codeswitching-Parakeet-Finetune)
 [![Website](https://img.shields.io/badge/Website-hebrish.app-1F6FEB?logo=googlechrome&logoColor=white)](https://hebrish.app)
 
 ---
@@ -93,10 +93,10 @@ On-device dictation with NVIDIA Parakeet, with a choice of model: stock Parakeet
 
 v0.1.0 (Android and desktop), 2026-10-19. Replaces Voice To Hebrish and Parakeet-Type-Ubuntu.
 
-[![APK](https://img.shields.io/badge/Download-APK_v0.1.0-2E7D6B?logo=android&logoColor=white)](https://github.com/danielrosehill/Parlance-Dictation/releases/download/android-v0.1.0/Parlance-v0.1.0.apk)
-[![.deb](https://img.shields.io/badge/Download-.deb_v0.1.0-E95420?logo=ubuntu&logoColor=white)](https://github.com/danielrosehill/Parlance-Dictation/releases/download/desktop-v0.1.0/parlance_0.1.0-1_amd64.deb)
-[![Windows](https://img.shields.io/badge/Download-Windows_v0.1.0-0078D4?logo=windows&logoColor=white)](https://github.com/danielrosehill/Parlance-Dictation/releases/download/desktop-v0.1.0/Parlance-v0.1.0-windows-x64.zip)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/danielrosehill/Parlance-Dictation)
+[![APK](https://img.shields.io/badge/Download-APK_v0.1.0-2E7D6B?logo=android&logoColor=white)](https://github.com/Hebrish-ASR/Parlance-Dictation/releases/download/android-v0.1.0/Parlance-v0.1.0.apk)
+[![.deb](https://img.shields.io/badge/Download-.deb_v0.1.0-E95420?logo=ubuntu&logoColor=white)](https://github.com/Hebrish-ASR/Parlance-Dictation/releases/download/desktop-v0.1.0/parlance_0.1.0-1_amd64.deb)
+[![Windows](https://img.shields.io/badge/Download-Windows_v0.1.0-0078D4?logo=windows&logoColor=white)](https://github.com/Hebrish-ASR/Parlance-Dictation/releases/download/desktop-v0.1.0/Parlance-v0.1.0-windows-x64.zip)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/Hebrish-ASR/Parlance-Dictation)
 
 ---
 
@@ -118,11 +118,11 @@ v1 results on `clean`:
 | Parakeet TDT 0.6B v2 (stock) | 32.6% |
 | Parakeet TDT 0.6B v3 (stock) | 31.4% |
 
-> *Contamination caveat:* 33 test-set clips overlap Whisper-Hebrish's training data: 26 are the identical recordings it trained on and 7 are new recordings of sentences it trained on. They are excluded from `clean`, the headline subset. Method: [`docs/about.md`](https://github.com/danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark/blob/main/docs/about.md) in the benchmark repo.
+> *Contamination caveat:* 33 test-set clips overlap Whisper-Hebrish's training data: 26 are the identical recordings it trained on and 7 are new recordings of sentences it trained on. They are excluded from `clean`, the headline subset. Method: [`docs/about.md`](https://github.com/Hebrish/English-Hebrew-Codeswitching-ASR-Benchmark/blob/main/docs/about.md) in the benchmark repo.
 
-[![Hugging Face](https://img.shields.io/badge/HuggingFace-Dataset-yellow?logo=huggingface)](https://huggingface.co/datasets/danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark)
+[![Hugging Face](https://img.shields.io/badge/HuggingFace-Dataset-yellow?logo=huggingface)](https://huggingface.co/datasets/Hebrish/English-Hebrew-Codeswitching-ASR-Benchmark)
 [![Leaderboard](https://img.shields.io/badge/HuggingFace-Leaderboard-yellow?logo=huggingface)](https://huggingface.co/spaces/danielrosehill/English-Hebrew-Codeswitching-ASR-Leaderboard)
-[![GitHub](https://img.shields.io/badge/GitHub-Runner%20%2B%20scorer-blue?logo=github)](https://github.com/danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark)
+[![GitHub](https://img.shields.io/badge/GitHub-Runner%20%2B%20scorer-blue?logo=github)](https://github.com/Hebrish/English-Hebrew-Codeswitching-ASR-Benchmark)
 
 ---
 
@@ -148,7 +148,7 @@ The original dataset of 516 audio-text pairs, recorded on 2025-11-17, and the tr
 
 > *Known defect:* the `hebrew_word` label was filled in by substring search. 114 of 474 labels match only inside an unrelated English word (for example `hi` ← *think*, `chool` ← *school*). Don't use that column as token labels. The re-annotated text lives in hebrew-latin-code-switching.
 
-[![Hugging Face](https://img.shields.io/badge/HuggingFace-Dataset-yellow?logo=huggingface)](https://huggingface.co/datasets/danielrosehill/English-Hebrew-Mixed-Sentences)
+[![Hugging Face](https://img.shields.io/badge/HuggingFace-Dataset-yellow?logo=huggingface)](https://huggingface.co/datasets/Hebrish/English-Hebrew-Mixed-Sentences)
 
 ---
 
@@ -158,7 +158,7 @@ The original dataset of 516 audio-text pairs, recorded on 2025-11-17, and the tr
 
 4,737 English sentences with token-level BIO spans that mark Hebrew words written in Latin letters. 458 of them are dictated sentences. The splits are term-disjoint: train has 987 seed terms, validation 124, test 124. A word is labelled Hebrew only if an English voice would mispronounce it, so *kosher* and *Shabbat* are negatives and *makolet* and *arnona* are positives.
 
-[![Hugging Face](https://img.shields.io/badge/HuggingFace-Dataset-yellow?logo=huggingface)](https://huggingface.co/datasets/danielrosehill/hebrew-latin-code-switching)
+[![Hugging Face](https://img.shields.io/badge/HuggingFace-Dataset-yellow?logo=huggingface)](https://huggingface.co/datasets/Hebrish/hebrew-latin-code-switching)
 
 ### hebrew-latin-token-classifier
 
@@ -173,9 +173,9 @@ An XLM-RoBERTa-base token classifier that finds Hebrew words in English text. On
 | Space | What it does |
 | --- | --- |
 | [Whisper-Hebrish](https://huggingface.co/spaces/danielrosehill/Whisper-Hebrish) | Record or upload audio and compare Whisper-Hebrish with stock Whisper Large V3 Turbo side by side |
-| [English-Hebrew Code-Switching Browser](https://huggingface.co/spaces/danielrosehill/English-Hebrew-Codeswitching-Browser) | Browse and listen to the code-switching recordings by Hebrew term. Reads straight from the Hub, so new recordings appear as soon as they are pushed |
+| [English-Hebrew Code-Switching Browser](https://huggingface.co/spaces/Hebrish/English-Hebrew-Codeswitching-Browser) | Browse and listen to the code-switching recordings by Hebrew term. Reads straight from the Hub, so new recordings appear as soon as they are pushed |
 | [Code-Switching ASR Leaderboard](https://huggingface.co/spaces/danielrosehill/English-Hebrew-Codeswitching-ASR-Leaderboard) | The benchmark leaderboard: Hebrew term recall and WER for each model on the frozen test set |
-| [Hebrew-in-Latin Span Review](https://huggingface.co/spaces/danielrosehill/hebrew-latin-span-review) | The manual annotation-review UI for the token-classifier corpus |
+| [Hebrew-in-Latin Span Review](https://huggingface.co/spaces/Hebrish/hebrew-latin-span-review) | The manual annotation-review UI for the token-classifier corpus |
 
 ---
 
@@ -185,17 +185,17 @@ An XLM-RoBERTa-base token classifier that finds Hebrew words in English text. On
 
 Builds the text corpus and the classifier: generation, blind cross-family annotation, adjudication, review and publishing.
 
-![Stars](https://img.shields.io/github/stars/danielrosehill/Hebrew-Latin-Token-Classifier?style=flat) ![Last commit](https://img.shields.io/github/last-commit/danielrosehill/Hebrew-Latin-Token-Classifier?style=flat)
+![Stars](https://img.shields.io/github/stars/Hebrish-ASR/Hebrew-Latin-Token-Classifier?style=flat) ![Last commit](https://img.shields.io/github/last-commit/Hebrish-ASR/Hebrew-Latin-Token-Classifier?style=flat)
 
-[danielrosehill/Hebrew-Latin-Token-Classifier](https://github.com/danielrosehill/Hebrew-Latin-Token-Classifier)
+[Hebrish-ASR/Hebrew-Latin-Token-Classifier](https://github.com/Hebrish-ASR/Hebrew-Latin-Token-Classifier)
 
 ### English-Hebrew-Codeswitching-ASR-Benchmark
 
 The benchmark's runner and scorer (`ehcs-bench`), a Modal GPU runner, and the per-model results as JSON.
 
-![Stars](https://img.shields.io/github/stars/danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark?style=flat) ![Last commit](https://img.shields.io/github/last-commit/danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark?style=flat)
+![Stars](https://img.shields.io/github/stars/Hebrish/English-Hebrew-Codeswitching-ASR-Benchmark?style=flat) ![Last commit](https://img.shields.io/github/last-commit/Hebrish/English-Hebrew-Codeswitching-ASR-Benchmark?style=flat)
 
-[danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark](https://github.com/danielrosehill/English-Hebrew-Codeswitching-ASR-Benchmark)
+[Hebrish/English-Hebrew-Codeswitching-ASR-Benchmark](https://github.com/Hebrish/English-Hebrew-Codeswitching-ASR-Benchmark)
 
 ### Hebrew-Small-Models-Planning
 
@@ -209,9 +209,9 @@ Planning repo for the TTS side, which fixes how Hebrew is pronounced in an Engli
 
 Public status tracker for the Parakeet code-switching fine-tune. The working code is in a separate private repo.
 
-![Stars](https://img.shields.io/github/stars/danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune?style=flat) ![Last commit](https://img.shields.io/github/last-commit/danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune?style=flat)
+![Stars](https://img.shields.io/github/stars/Hebrish-ASR/English-Hebrew-Codeswitching-Parakeet-Finetune?style=flat) ![Last commit](https://img.shields.io/github/last-commit/Hebrish-ASR/English-Hebrew-Codeswitching-Parakeet-Finetune?style=flat)
 
-[danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune)
+[Hebrish-ASR/English-Hebrew-Codeswitching-Parakeet-Finetune](https://github.com/Hebrish-ASR/English-Hebrew-Codeswitching-Parakeet-Finetune)
 
 ### Whisper-Fine-Tune-Accuracy-Eval
 
