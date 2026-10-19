@@ -24,6 +24,7 @@
       "version": "v2",
       "url": "https://huggingface.co/danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching",
       "tracker": "https://github.com/danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune",
+      "website": "https://hebrish.app",
       "base_model": "nvidia/parakeet-tdt-0.6b-v2",
       "trained_on": [
         "danielrosehill/English-Hebrew-Codeswitching-Sentences"

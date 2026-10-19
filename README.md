@@ -48,6 +48,7 @@ The work indexed here fixes that from two directions:
 
 | If you want to… | Go to |
 | --- | --- |
+| Get the Hebrish keyboard and desktop apps, see the results, and find every model, dataset and demo in one place | **Website: [hebrish.app](https://hebrish.app)** |
 | Hear the problem and the fix side by side | [Whisper-Hebrish Space](https://huggingface.co/spaces/danielrosehill/Whisper-Hebrish) |
 | Train an ASR model on code-switched speech | [English-Hebrew-Codeswitching-Sentences](https://huggingface.co/datasets/danielrosehill/English-Hebrew-Codeswitching-Sentences) |
 | Compare ASR models on code-switching | [Code-switching ASR leaderboard](https://huggingface.co/spaces/danielrosehill/English-Hebrew-Codeswitching-ASR-Leaderboard) |
@@ -70,11 +71,14 @@ Whisper Large V3 Turbo fine-tuned on English sentences containing Hebrew words, 
 
 A fine-tune of [`nvidia/parakeet-tdt-0.6b-v2`](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v2) for on-device Android dictation. Parakeet v2's tokenizer has no Hebrew characters, so the model learns one romanized spelling for each Hebrew word. **Status 2026-10-15: v2 released** (`.nemo` plus GGUF Q8_0 and Q4_K_M for on-device use). It leads the [benchmark](#benchmark) at 65.7% Hebrew term recall, against 32.6% for stock Parakeet v2. The tracker repo below records progress.
 
+**Website: [hebrish.app](https://hebrish.app)**: get the Hebrish keyboard for Android and the desktop apps, see the results, and find every model, dataset and demo in one place.
+
 **Formats (2026-10-16):** [GGUF](https://huggingface.co/danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching-GGUF) (Q8_0, Q4_K_M, F16: Handy, Offline Voice Input), [ONNX](https://huggingface.co/danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching-ONNX) (onnx-asr layout, fp32 + int8: Voxtype), [sherpa-onnx int8](https://huggingface.co/danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching-sherpa-onnx-int8) (the format [Parlance](https://github.com/danielrosehill/Parlance-Dictation) downloads).
 
 [![Hugging Face](https://img.shields.io/badge/HuggingFace-Model-yellow?logo=huggingface)](https://huggingface.co/danielrosehill/Parakeet-TDT-0.6B-v2-English-Hebrew-Codeswitching)
 
 [![Tracker](https://img.shields.io/badge/GitHub-Tracker-blue?logo=github)](https://github.com/danielrosehill/English-Hebrew-Codeswitching-Parakeet-Finetune)
+[![Website](https://img.shields.io/badge/Website-hebrish.app-1F6FEB?logo=googlechrome&logoColor=white)](https://hebrish.app)
 
 ---
 
