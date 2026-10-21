@@ -1,6 +1,6 @@
 # English-Hebrew Code-Switching Index
 
-[![Master Index](https://img.shields.io/badge/Master%20Index-All%20Repositories-purple?style=for-the-badge&logo=github)](https://github.com/danielrosehill/Index)
+[![Master Index](https://img.shields.io/badge/Master%20Index-All%20Repositories-purple?style=for-the-badge&logo=github)](https://github.com/danielrosehill/Start-Here)
 [![Subindices](https://img.shields.io/badge/Index%20of%20Indexes-Subindices-FF6B6B?style=for-the-badge&logo=github)](https://github.com/danielrosehill/Subindices)
 
 Models, datasets, Spaces and companion repositories for **English speech and text that contains Hebrew words** — the way English-speaking immigrants in Israel and Jews in the diaspora actually talk.
@@ -291,7 +291,7 @@ flowchart LR
 
 | Index | Relationship |
 | --- | --- |
-| [Index](https://github.com/danielrosehill/Index) | Master index of all public repositories |
+| [Index](https://github.com/danielrosehill/Start-Here) | Master index of all public repositories |
 | [Subindices](https://github.com/danielrosehill/Subindices) | Index of indexes. This one is listed there |
 | [Hugging-Face-Releases-Index](https://github.com/danielrosehill/Hugging-Face-Releases-Index) | All Hugging Face releases by theme. This index is its code-switching theme in depth |
 | [Israeli-AI](https://github.com/danielrosehill/Israeli-AI) | The wider Israeli AI ecosystem. This index is its code-switching branch |
