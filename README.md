@@ -5,6 +5,8 @@
 
 Models, datasets, Spaces and companion repositories for **English speech and text that contains Hebrew words** — the way English-speaking immigrants in Israel and Jews in the diaspora actually talk.
 
+**Last Updated:** October 2026
+
 **Snapshot:** 2026-10-19 · Machine-readable copy: [`data/index.json`](data/index.json)
 
 ---
